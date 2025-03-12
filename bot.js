@@ -1,3 +1,19 @@
+const express = require('express');
+const app = express();
+
+const PORT = process.env.PORT || 3000; // از پورت تعیین‌شده توسط Render استفاده کن
+
+app.get('/', (req, res) => {
+    res.send('Bot is running...');
+});
+
+// سرور رو اجرا کن
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
+
+
 const TelegramBot = require('node-telegram-bot-api');
 const path = require('path');
 const fs = require('fs');
